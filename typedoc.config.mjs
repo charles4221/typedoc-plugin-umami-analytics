@@ -9,6 +9,7 @@ const config = {
   navigationLinks: {
     GitHub: 'https://github.com/charles4221/typedoc-plugin-umami-analytics',
   },
+  favicon: './assets/logo.png',
   out: './docs',
   plugin: ['typedoc-github-theme', './dist/index.js'],
   readme: './README.md',

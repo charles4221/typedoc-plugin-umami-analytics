@@ -1,3 +1,5 @@
+<img src="./assets/logo.png" alt="" width="50">
+
 # typedoc-plugin-umami-analytics
 
 A [TypeDoc](https://typedoc.org/) plugin for integrating [Umami Analytics](https://umami.is/docs) into your documentation.
