@@ -47,6 +47,7 @@ In order to use this plugin, you must provide the following options:
 
 ```jsonc
 {
+  "plugin": ["typedoc-plugin-umami-analytics"],
   // Required: The URL of your Umami Analytics tracking script, e.g. "https://example.com/script.js"
   "umamiScriptURL": "https://example.com/script.js",
   // Required: The website ID for your Umami Analytics instance. You can find this in your Umami dashboard.
