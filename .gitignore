@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+*.pem
+
+# Build output
+/*.tgz
+/dist
+/docs
+
+# Node modules
+node_modules
+
+# typescript
+*.tsbuildinfo
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*

@@ -1,0 +1,32 @@
+on:
+  push:
+    branches:
+      - main
+      - release/*
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  lint:
+    name: Lint Code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js v22.17.0
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22.17.0'
+          cache: 'npm'
+
+      - name: Install Node Dependencies
+        run: npm ci
+
+      - name: Check Code Formatting with Prettier
+        run: npm run format:check
+
+      - name: Lint Code with ESLint
+        run: npm run lint
+
+      - name: Validate TypeScript Types
+        run: npm run validate

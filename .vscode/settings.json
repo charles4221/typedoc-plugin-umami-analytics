@@ -1,0 +1,29 @@
+{
+  // VSCode Settings
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "javascript.format.enable": false, // Disable built-in JavaScript formatter, handled by Prettier
+  "javascript.validate.enable": false, // Disable built-in JavaScript validation, handled by ESLint and Typescript
+  "typescript.tsdk": "node_modules/typescript/lib", // ensure VSCode uses the project's TypeScript version
+  // Language-specific Overrides
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Extension Settings,
+  "cSpell.words": ["umami"],
+  "eslint.enable": true,
+  "eslint.format.enable": false, // Handled by Prettier
+  "prettier.enable": true
+}
