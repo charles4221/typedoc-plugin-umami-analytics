@@ -35,6 +35,9 @@ jobs:
       - name: Install Node Dependencies
         run: npm ci
 
+      - name: Build TypeDoc Plugin
+        run: npm run build
+
       - name: Build Documentation
         run: npm run docs:build
 

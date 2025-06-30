@@ -30,10 +30,10 @@ typedoc --plugin typedoc-plugin-umami-analytics
 
 ### TypeDoc Config File
 
-```json
+```jsonc
 // typedoc.json
 {
-  "plugin": ["typedoc-plugin-umami-analytics"]
+  "plugin": ["typedoc-plugin-umami-analytics"],
 }
 ```
 
@@ -45,12 +45,12 @@ You can configure the plugin by passing options in your TypeDoc config file or v
 
 In order to use this plugin, you must provide the following options:
 
-```json
+```jsonc
 {
   // Required: The URL of your Umami Analytics tracking script, e.g. "https://example.com/script.js"
   "umamiScriptURL": "https://example.com/script.js",
   // Required: The website ID for your Umami Analytics instance. You can find this in your Umami dashboard.
-  "umamiWebsiteID": "your-website-id"
+  "umamiWebsiteID": "your-website-id",
 }
 ```
 
@@ -67,7 +67,7 @@ This input will result in the following HTML being added before the closing `</b
 
 You can also provide the following optional configuration options (in line with the [Umami Tracker Configuration options](https://umami.is/docs/tracker-configuration)):
 
-```json
+```jsonc
 {
   /**
    * The URL of the Umami Analytics host, e.g. "https://example-other.com"
@@ -107,7 +107,7 @@ You can also provide the following optional configuration options (in line with 
    * If true, no analytics data will be sent if the user has enabled Do Not Track.
    * Defaults to false.
    */
-  "umamiDoNotTrack": true
+  "umamiDoNotTrack": true,
 }
 ```
 
