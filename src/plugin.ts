@@ -76,7 +76,7 @@ export function load(app: Application) {
   app.options.addDeclaration({
     name: optionUmamiDoNotTrack,
     type: ParameterType.Boolean,
-    defaultValue: true,
+    defaultValue: false,
     help: "Whether to respect the Do Not Track setting in the user's browser.",
   });
 
