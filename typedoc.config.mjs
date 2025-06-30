@@ -22,7 +22,7 @@ const config = {
   theme: 'typedoc-github-theme',
   darkHighlightTheme: 'catppuccin-mocha',
   lightHighlightTheme: 'catppuccin-latte',
-  umamiScriptURL: 'https://analytics.charlesharwood.dev',
+  umamiScriptURL: 'https://analytics.charlesharwood.dev/script.js',
   umamiWebsiteID: 'c7d8cd27-6212-454d-849b-2a9227b07b2c',
   useFirstParagraphOfCommentAsSummary: true,
 };
