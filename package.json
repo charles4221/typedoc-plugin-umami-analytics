@@ -38,8 +38,8 @@
     "docs:run": "concurrently \"npm:docs:watch\" \"npm:docs:preview\" --names \"TypeDoc,serve\" --prefix-colors \"blue,green\" --kill-others-on-fail",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
-    "prettier": "prettier --check .",
-    "prettier:fix": "prettier --write .",
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write .",
     "validate": "tsc --project tsconfig.json --noEmit"
   },
   "peerDependencies": {
