@@ -16,8 +16,22 @@ Since I use both of these tools in my projects, I decided to create this plugin 
 
 ## Installation
 
-```
+To install the plugin, you can use your preferred package manager. Make sure you have [installed TypeDoc](https://typedoc.org/) in your project first.
+
+```bash
 npm install --save-dev typedoc-plugin-umami-analytics
+```
+
+OR
+
+```bash
+yarn add --dev typedoc-plugin-umami-analytics
+```
+
+OR
+
+```bash
+pnpm add --save-dev typedoc-plugin-umami-analytics
 ```
 
 ## Usage
@@ -55,6 +69,14 @@ In order to use this plugin, you must provide the following options:
   // Required: The website ID for your Umami Analytics instance. You can find this in your Umami dashboard.
   "umamiWebsiteID": "your-website-id",
 }
+```
+
+Alternatively, the CLI options above can be passed directly:
+
+```bash
+typedoc --plugin typedoc-plugin-umami-analytics \
+  --umamiScriptURL https://example.com/script.js \
+  --umamiWebsiteID your-website-id
 ```
 
 This input will result in the following HTML being added before the closing `</body>` tag of each generated HTML page:

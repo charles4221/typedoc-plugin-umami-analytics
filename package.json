@@ -28,6 +28,7 @@
   "bugs": {
     "url": "https://github.com/charles4221/typedoc-plugin-umami-analytics/issues"
   },
+  "homepage": "https://charles4221.github.io/typedoc-plugin-umami-analytics/",
   "scripts": {
     "build": "npm run clean && npm run compile",
     "clean": "rimraf dist",
