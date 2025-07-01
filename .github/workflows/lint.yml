@@ -1,5 +1,6 @@
 # Run the lint workflow on pushes to main and release branches, and on pull requests.
 # This workflow checks code formatting, linting, and TypeScript type validation.
+name: 'Lint Code'
 on:
   push:
     branches:

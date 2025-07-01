@@ -1,8 +1,9 @@
 # Run the publish workflow when the lint and docs workflows complete successfully on the main branch.
 # This workflow publishes the package to npm using semantic-release.
+name: 'Publish Package'
 on:
   workflow_run:
-    workflows: ['lint', 'docs']
+    workflows: ['Lint Code', 'Deploy Docs']
     branches:
       - main
     types:

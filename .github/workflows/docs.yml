@@ -1,7 +1,8 @@
 # Run the docs workflow when the lint workflow completes successfully on the main branch.
+name: 'Deploy Docs'
 on:
   workflow_run:
-    workflows: ['lint']
+    workflows: ['Lint Code']
     branches:
       - main
     types:
