@@ -37,6 +37,9 @@ jobs:
       - name: Audit Signatures
         run: npm audit signatures
 
+      - name: Build Package
+        run: npm run build
+
       - name: Release Package
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
