@@ -1,6 +1,6 @@
 {
   "name": "typedoc-plugin-umami-analytics",
-  "version": "1.0.0",
+  "version": "0.0.0-semantically-released",
   "description": "A TypeDoc plugin for integrating the Umami Analytics tracking script into generated documentation.",
   "author": {
     "name": "Charles Harwood",
@@ -57,6 +57,7 @@
     "globals": "^16.2.0",
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
+    "semantic-release": "^24.2.6",
     "serve": "^14.2.4",
     "typedoc": "^0.28.6",
     "typedoc-github-theme": "^0.3.0",

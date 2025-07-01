@@ -1,0 +1,43 @@
+# Run the publish workflow when the lint and docs workflows complete successfully on the main branch.
+# This workflow publishes the package to npm using semantic-release.
+on:
+  workflow_run:
+    workflows: ['lint', 'docs']
+    branches:
+      - main
+    types:
+      - completed
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  id-token: write
+
+jobs:
+  npm-publish:
+    name: npm-publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history for all branches and tags
+
+      - name: Set up Node.js v22.17.0
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22.17.0'
+          cache: 'npm'
+
+      - name: Install Node Dependencies
+        run: npm clean-install
+
+      - name: Audit Signatures
+        run: npm audit signatures
+
+      - name: Release Package
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
