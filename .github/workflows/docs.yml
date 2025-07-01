@@ -1,8 +1,11 @@
+# Run the docs workflow when the lint workflow completes successfully on the main branch.
 on:
-  push:
+  workflow_run:
+    workflows: ['lint']
     branches:
       - main
-  workflow_dispatch:
+    types:
+      - completed
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
